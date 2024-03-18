@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Ojuju:wght@200..800&display=swap');
+
+header{
+    margin: 0px;
+    background-color: black;
+    color: white;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+.header-box{
+    display: flex;
+    justify-content:space-around;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 7px;
+
+    font-family: "Bokor", system-ui;
+    font-weight: 300;
+    font-size: 2em;
+    font-style: normal;
+}
+
+.button{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: rgb(169, 169, 169);
+}

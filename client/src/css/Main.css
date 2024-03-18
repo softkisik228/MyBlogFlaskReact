@@ -1,0 +1,47 @@
+.main{
+    margin-top: 70px;
+}
+
+.text-blocks{
+    font-size: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.block1{
+    display: flex;
+    align-items: center;
+    border: 20px;
+    background-color:rgb(216, 216, 216);
+    height: 400px;
+    width: 50%;
+    color:rgb(47, 47, 47);
+    float: left;
+
+}
+
+.block2{
+    display: flex;
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    height: 200px;
+    width: 50%;
+    color:rgb(0, 0, 0);
+    float: right;
+}
+
+.block3{
+    display: flex;
+    align-items: center;    
+    background-color:rgb(117, 117, 117);
+    height: 200px;
+    width: 50%;
+    color:rgb(255, 255, 255);
+    float: right;
+}
+
+.about-text{
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
