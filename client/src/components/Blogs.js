@@ -5,7 +5,8 @@ import Blog from "./Blog";
 const Blogs = () =>{
     return (
         <div className="Blogs">
-            <Blog/>
+            <hr className="hr-line"></hr>
+            <div id="main-colnum"><Blog/></div>
         </div>  
     );
 }

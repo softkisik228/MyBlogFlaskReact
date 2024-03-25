@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Main.css';
-import Add_post_form from "./Add_post_form";
+import AddPostForm from "./AddPostForm";
 
 const Main = () =>{
     return (
@@ -16,7 +16,7 @@ const Main = () =>{
                     <p className="about-text">I love kittens and my girlfriend!</p>
                 </div>
             </div>
-            <Add_post_form/>
+            <AddPostForm/>
         </div>
     );
 }
