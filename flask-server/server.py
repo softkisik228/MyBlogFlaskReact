@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, make_response
 import psycopg2
 from config import host, password, user, db_name
 
@@ -10,7 +10,7 @@ def index():
     return {'info': 'some information'}
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/add_post', methods=['GET'])
 def add_post():
     data = request.args.to_dict()
     print(data)
@@ -36,7 +36,7 @@ def add_post():
         if connection:
             connection.close()
             print('[INFO] PostgreSQL connection closed')
-
+    return make_response('OK', status_code=200)
     
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
