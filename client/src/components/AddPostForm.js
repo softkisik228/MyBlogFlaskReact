@@ -4,15 +4,29 @@ import '../css/AddPostForm.css';
 const AddPostForm = () => {
     const [show, setShow] = useState(false);
 
-    const AddNewPost = () => {
+    const AddNewPost = async () => {
         var post_form = document.getElementById('add-form');
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         var yyyy = today.getFullYear();
         today = dd + '.' + mm + '.' + yyyy;
+        let post = {
+            'post': post_form.post.value,
+            'date': today,
+            'nickname': 'kisik'
+        }
         try{
-            fetch('http://127.0.0.1:5000/add_post?post=' + post_form.post.value + '&date='+ today + '&nickname=kisik');
+            const response = await fetch('http://127.0.0.1:5000/add_post', {
+                body: JSON.stringify(post),
+                credentials: "include",
+                mode: 'no-cors' ,
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                  },
+            });
+            console.log(response)
         }catch (err){
             console.log(err);
         }
