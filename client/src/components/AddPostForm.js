@@ -8,7 +8,7 @@ const AddPostForm = () => {
         var post_form = document.getElementById('add-form');
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); 
         var yyyy = today.getFullYear();
         today = dd + '.' + mm + '.' + yyyy;
         let post = {
@@ -20,13 +20,13 @@ const AddPostForm = () => {
             const response = await fetch('http://127.0.0.1:5000/add_post', {
                 body: JSON.stringify(post),
                 credentials: "include",
-                mode: 'no-cors' ,
+                mode: 'no-cors',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                   },
             });
-            console.log(response)
+            console.log(response);
         }catch (err){
             console.log(err);
         }
