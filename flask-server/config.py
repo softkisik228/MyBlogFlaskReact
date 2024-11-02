@@ -1,4 +1,4 @@
 host = '127.0.0.1'
 user = 'postgres'
-password = '18283858aA'
+password = 'seregapirat'
 db_name = 'blog_db'
